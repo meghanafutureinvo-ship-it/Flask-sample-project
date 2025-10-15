@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentors Auto Scroll with Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .scroll-wrapper {
+      overflow: hidden;
+      position: relative;
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+
+    .scroll-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 20s linear infinite;
+      gap: 1rem;
+      padding-left: 1rem;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .mentor-card {
+      flex: 0 0 auto;
+      width: 200px;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="mb-4">Our Mentors</h2>
+  </div>
+
+  <div class="scroll-wrapper">
+    <div class="scroll-track">
+      <!-- We repeat 4 cards twice for seamless scroll -->
+
+      <!-- Card 1 -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Ravi Prakash">
+          <div class="card-body">
+            <h5 class="card-title">Ravi Prakash</h5>
+            <p class="card-text">Founder | Rodha</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Ankur Warikoo">
+          <div class="card-body">
+            <h5 class="card-title">Ankur Warikoo</h5>
+            <p class="card-text">Founder | Webveda</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Neeraj Arora">
+          <div class="card-body">
+            <h5 class="card-title">Neeraj Arora</h5>
+            <p class="card-text">Founder | Edu91</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Atish Mathur">
+          <div class="card-body">
+            <h5 class="card-title">Atish Mathur</h5>
+            <p class="card-text">UPSC Educator</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate for continuous scroll -->
+
+      <!-- Card 1 Duplicate -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Ravi Prakash">
+          <div class="card-body">
+            <h5 class="card-title">Ravi Prakash</h5>
+            <p class="card-text">Founder | Rodha</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 Duplicate -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Ankur Warikoo">
+          <div class="card-body">
+            <h5 class="card-title">Ankur Warikoo</h5>
+            <p class="card-text">Founder | Webveda</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 Duplicate -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Neeraj Arora">
+          <div class="card-body">
+            <h5 class="card-title">Neeraj Arora</h5>
+            <p class="card-text">Founder | Edu91</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 Duplicate -->
+      <div class="mentor-card">
+        <div class="card">
+          <img src="OIP.jpeg" alt="Atish Mathur">
+          <div class="card-body">
+            <h5 class="card-title">Atish Mathur</h5>
+            <p class="card-text">UPSC Educator</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
