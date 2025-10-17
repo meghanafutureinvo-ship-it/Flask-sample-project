@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}My Website{% endblock %}</title>
+</head>
+
+<body>
+  {% include 'partials/header.html' %}
+
+  <main>
+    {% block content %}
+    <!-- Page-specific content goes here -->
+    {% endblock %}
+  </main>
+
+  {% include 'partials/footer.html' %}
+</body>
+
+</html>
